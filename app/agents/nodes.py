@@ -183,7 +183,7 @@ def rewrite_query(state: State, llm: Any) -> dict[str, Any]:
         [_name_internal_message(last_message, "clarification_response")] if pending_query else []
     )
 
-    if response.questions and response.is_clear:
+    if response.questions:
         return {
             "questionIsClear": True,
             "originalQuery": original_query,
